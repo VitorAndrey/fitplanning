@@ -10,12 +10,6 @@
     "test": "jest",
     "test:watch": "jest --watchAll"
   },
-  "jest": {
-    "preset": "jest-expo",
-    "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@sentry/react-native|native-base|react-native-svg)"
-    ]
-  },
   "dependencies": {
     "expo": "51.0.31",
     "expo-status-bar": "1.12.1",
