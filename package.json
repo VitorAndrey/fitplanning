@@ -8,17 +8,22 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@tanstack/react-query": "5.52.2",
     "expo": "51.0.31",
     "expo-status-bar": "1.12.1",
     "react": "18.3.1",
     "react-native": "0.75.2",
-    "twrnc": "4.5.1"
+    "twrnc": "4.5.1",
+    "zustand": "4.5.5"
   },
   "devDependencies": {
     "@babel/core": "7.25.2",
+    "@tanstack/eslint-plugin-query": "5.52.0",
     "@testing-library/react-native": "12.6.0",
     "@types/jest": "29.5.12",
     "@types/react": "18.2.79",
