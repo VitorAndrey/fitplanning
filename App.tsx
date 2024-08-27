@@ -1,12 +1,22 @@
-import { tw } from "@/utils/twrnc";
+import { QueryProvider } from "@/lib/tanstack-query";
+import { Router } from "@/routes/router";
+import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
-import { Text, View } from "react-native";
+import {
+  SafeAreaProvider,
+  initialWindowMetrics,
+} from "react-native-safe-area-context";
 
 export default function App() {
   return (
-    <View style={tw("flex-1 items-center justify-center")}>
-      <Text>Welcome!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <QueryProvider>
+      <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+        <NavigationContainer>
+          <Router />
+        </NavigationContainer>
+      </SafeAreaProvider>
+
+      <StatusBar style="auto" translucent backgroundColor="transparent" />
+    </QueryProvider>
   );
 }

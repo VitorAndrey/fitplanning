@@ -1,3 +1,3 @@
-test("1 + 1 = 2", () => {
+test("Unit tests", () => {
   expect(1 + 1).toBe(2);
 });
