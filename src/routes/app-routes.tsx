@@ -23,6 +23,8 @@ function Home() {
   });
   return (
     <>
+      <Text>Home</Text>
+
       {isLoading ? (
         <Text>loading</Text>
       ) : (
