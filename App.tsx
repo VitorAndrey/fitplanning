@@ -1,12 +1,16 @@
-import { tw } from "@/utils/twrnc";
+import { QueryProvider } from "@/lib/tanstack-query";
+import { NavigationContainer } from "@react-navigation/native";
+import { AppRoutes } from "@/routes/app-routes";
 import { StatusBar } from "expo-status-bar";
-import { Text, View } from "react-native";
 
 export default function App() {
   return (
-    <View style={tw("flex-1 items-center justify-center")}>
-      <Text>Welcome!</Text>
+    <QueryProvider>
+      <NavigationContainer>
+        <AppRoutes />
+      </NavigationContainer>
+
       <StatusBar style="auto" />
-    </View>
+    </QueryProvider>
   );
 }
